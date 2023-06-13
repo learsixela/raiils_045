@@ -5,17 +5,23 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* verificar estar en la terminal con ubuntu -> inforcap@ubuntu:~$
+ssh -p 2222 inforcap@127.0.0.1
 
-* System dependencies
+* crear un proyecto rails
+rails new demo -d postgresql  (rails new demo --database postgresql )
 
-* Configuration
+* acceder al proyecto
+cd demo
 
-* Database creation
+* ejecutar creacion de base datos
+rails db:create
 
-* Database initialization
+* desplegando el servidor
+rails s
 
-* How to run the test suite
+* probar en el browser 
+http://127.0.0.1:3000
 
 * Services (job queues, cache servers, search engines, etc.)
 
