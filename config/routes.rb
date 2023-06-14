@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :libros
+  
   get 'post/destroy'
   get 'post/index'
   get 'post/show'

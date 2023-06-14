@@ -61,3 +61,26 @@ pin "bootstrap", to: 'bootstrap.min.js', preload: true
 
 * * agregar a application.html.erb en la seccion head bajo los estilos
 <%= javascript_importmap_tags %>
+
+# SCAFFOLD
+
+* rails g scaffold libro nombre descripcion
+nos crea el CRUD,
+
+* ejecutar migracion, creacion o modificación de una tabla 
+rails db:migrate
+
+* saber cuales son las migraciones ejecutadas
+rails db:migrate:status
+
+* eliminar la base datos con todos los datos
+rails db:drop
+
+* reiniciar la base datos y las migraciones
+rails db:reset
+
+* deshacer la ultima migracion
+rails db:rollback
+
+* deshacer una cantidad especifica de migraciones
+rails db:rollback STEP=2
