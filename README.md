@@ -84,3 +84,9 @@ rails db:rollback
 
 * deshacer una cantidad especifica de migraciones
 rails db:rollback STEP=2
+
+* agregar columna a tabla existente
+rails g migration addColumnToLibro paginas:integer
+
+* generar modelo, migracion y test
+rails g model user nombre email
