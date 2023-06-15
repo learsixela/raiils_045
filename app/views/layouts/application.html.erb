@@ -7,13 +7,28 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <!-- css -->
+    <%= stylesheet_link_tag "fontawesome-all.min" %>
+    <%= stylesheet_link_tag "main" %>
+    <%= stylesheet_link_tag "noscript" %>
+
     <%= javascript_importmap_tags %>
+
   </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
-    <div class="container">
+  <body  class="is-preload">
+    <div id="wrapper">
+      <%= render 'shared/header' %>
+      <%= render 'shared/menu' %>
+
       <%= yield %>
+      
+      <%= render 'shared/footer' %>
     </div>
+    <%= javascript_include_tag "breakpoints.min" %>
+    <%= javascript_include_tag "browser.min" %>
+    <%= javascript_include_tag "jquery.min" %>
+    <%= javascript_include_tag "main" %>
+    <%= javascript_include_tag "util" %>
   </body>
 </html>

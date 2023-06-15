@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :libros
   
   get 'post/destroy'
@@ -15,7 +16,9 @@ Rails.application.routes.draw do
   get "welcome", to: "welcome#index"
   get "home", to: "home#index"
   get "palma", to: "mijail#mostrar"
-
+  get "index", to: 'phantom#index'
+  get "generic", to: 'phantom#generic'
+  get "elements", to: 'phantom#elements'
 
   # Defines the root path route ("/")
   root "welcome#index"
