@@ -5,12 +5,36 @@
 <br><hr>
 
 <div id="libros">
-  <% @libros.each do |libro| %>
-    <%= render libro %>
-    <p>
-      <%= link_to "Show this libro", libro %>
-    </p>
-  <% end %>
+
+  <section>
+
+    <div class="table-wrapper">
+        <table class="alt">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>show</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+              <% @libros.each do |libro| %>
+                <tr>
+                  <td> <%= libro.nombre %> </td>
+                  <td> <%= libro.descripcion %> </td>
+                  <td> <%= libro.precio %> </td>
+                  <td> <%= link_to "Show this libro", libro %> </td>
+                </tr>
+
+              <% end %>
+            
+            </tbody>
+        </table>
+    </div>
+  </section>
+
 </div>
 
 
